@@ -2,5 +2,8 @@
 <p>Find me in app/views/welcome/index.html.erb</p>
 
 <ol>
-		<li><%= link_to "Application Management", applications_path %></li>
+	<% @applications.each do|app| %>
+		<li><%= link_to app.name, "#" %></li>
+	<% end %>	
+	<li><%= link_to "Applications", applications_path %></li>
 </ol>
