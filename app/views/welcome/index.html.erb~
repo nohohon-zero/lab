@@ -5,5 +5,4 @@
 	<% @applications.each do|app| %>
 		<li><%= link_to app.name, "#" %></li>
 	<% end %>	
-	<%= link_to "Applications", applications_path %>
 </ol>
