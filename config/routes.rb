@@ -1,4 +1,6 @@
 Lab::Application.routes.draw do
+  resources :categories
+
   resources :programs
 
   get "welcome/index"
