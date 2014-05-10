@@ -1,0 +1,25 @@
+<%= form_for(@program_category) do |f| %>
+  <% if @program_category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@program_category.errors.count, "error") %> prohibited this program_category from being saved:</h2>
+
+      <ul>
+      <% @program_category.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :program_id %><br>
+    <%= f.text_field :program_id %>
+  </div>
+  <div class="field">
+    <%= f.label :category_id %><br>
+    <%= f.text_field :category_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

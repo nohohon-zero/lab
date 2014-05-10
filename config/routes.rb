@@ -1,4 +1,8 @@
 Lab::Application.routes.draw do
+  resources :histories
+
+  resources :program_categories
+
   resources :categories
 
   resources :programs

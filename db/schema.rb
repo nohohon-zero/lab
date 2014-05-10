@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140509021326) do
+ActiveRecord::Schema.define(version: 20140510023817) do
 
   create_table "applications", force: true do |t|
     t.string   "name"
@@ -27,6 +27,23 @@ ActiveRecord::Schema.define(version: 20140509021326) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "histories", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "program_categories", force: true do |t|
+    t.integer  "program_id"
+    t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "program_categories", ["category_id"], name: "index_program_categories_on_category_id"
+  add_index "program_categories", ["program_id"], name: "index_program_categories_on_program_id"
 
   create_table "programs", force: true do |t|
     t.string   "name"
