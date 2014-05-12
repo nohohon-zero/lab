@@ -5,7 +5,7 @@ class HistoriesController < ApplicationController
   # GET /histories.json
   def index
     #@histories = History.all
-    @histories = History.find(:all,:order=>"created_at DESC"
+    @histories = History.find(:all,:order=>"created_at DESC")
   end
 
   # GET /histories/1

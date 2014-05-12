@@ -2,7 +2,8 @@
 
 <table>
   <thead>
-    <tr>
+	<tr>
+	  <th>Date</th>
       <th>Name</th>
       <th>Description</th>
       <th></th>
@@ -14,6 +15,7 @@
   <tbody>
     <% @histories.each do |history| %>
       <tr>
+        <td><%= history.created_at.to_s %></td>
         <td><%= history.name %></td>
         <td><%= history.description %></td>
         <td><%= link_to 'Show', history %></td>
